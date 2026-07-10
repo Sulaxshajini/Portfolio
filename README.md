@@ -10,7 +10,7 @@
 [![Status](https://img.shields.io/badge/Status-Live-brightgreen?style=flat-square)](https://github.com/Sulaxshajini/Portfolio)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)](LICENSE)
 
-[🔗 Live Demo](#) • [📁 Repository](https://github.com/Sulaxshajini/Portfolio) • [📧 Contact](mailto:sulaxshajini07@gmail.com)
+[🔗 Live Demo](https://sulaxshajini.github.io/Portfolio/) • [📁 Repository](https://github.com/Sulaxshajini/Portfolio) • [📧 Contact](mailto:sulaxshajini07@gmail.com)
 
 </div>
 
@@ -145,7 +145,7 @@ This portfolio itself — a showcase of frontend design and development skills.
 | 📧 Email | [sulaxshajini07@gmail.com](mailto:sulaxshajini07@gmail.com) |
 | 💼 LinkedIn | [linkedin.com/in/sulaxshajini](https://linkedin.com/in/sulaxshajini) |
 | 🐙 GitHub | [github.com/Sulaxshajini](https://github.com/Sulaxshajini) |
-| 🌐 Portfolio | [Live Site](#) |
+| 🌐 Portfolio | [Live Site](https://sulaxshajini.github.io/Portfolio/) |
 
 </div>
 
