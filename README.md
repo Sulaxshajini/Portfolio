@@ -17,8 +17,6 @@
 ## ✨ Overview
 
 A premium, interactive personal portfolio for **Sulaxshajini Kumarakulasingam**, built around the concept of **"SYSTEM ONLINE"** — a sophisticated technical system interface. The site is designed to communicate IT support expertise, systems thinking, and technical troubleshooting through purposeful animation and data-driven components.
-
-> **Live:** [sulaxshajini.github.io/Portfolio](https://sulaxshajini.github.io/Portfolio) *(old)*
 > Update this link once the new version is deployed.
 
 ---
