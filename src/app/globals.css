@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Brand palette: plum #542a52 + peach #ffb39a. Surfaces are darker plum shades of the brand plum. */
+  --color-plum: #542a52;
+  --color-peach: #ffb39a;
+  --color-mauve: #b5557a; /* mid-tone between plum and peach, used only in gradients/glows */
+
+  --color-primary-bg: #1a0d19;
+  --color-secondary-bg: #230f22;
+  --color-card-bg: #2d1530;
+  --color-card-elevated: #3a1c3a;
+
+  --color-accent-primary: #ffb39a;
+  --color-accent-secondary: #542a52;
+  --color-highlight: #ffd2c4;
+
+  --color-status-success: #34D399;
+  --color-status-warning: #FBBF24;
+  --color-status-danger: #FB7185;
+
+  --color-text-primary: #fff6f2;
+  --color-text-secondary: #ecd5d6;
+  --color-text-muted: #b99aab;
+
+  --color-border-subtle: rgba(255, 179, 154, 0.16);
+
+  /* Slow ambient drift for background light (transform-only, compositor-friendly) */
+  --animate-aurora-a: aurora-a 26s ease-in-out infinite alternate;
+  --animate-aurora-b: aurora-b 32s ease-in-out infinite alternate;
+  --animate-marquee: marquee 40s linear infinite;
+  --animate-ring: ring 3.2s ease-out infinite;
+  @keyframes aurora-a { from { transform: translate3d(-4%, -3%, 0) scale(1); } to { transform: translate3d(6%, 5%, 0) scale(1.08); } }
+  @keyframes aurora-b { from { transform: translate3d(5%, 4%, 0) scale(1.05); } to { transform: translate3d(-6%, -4%, 0) scale(0.95); } }
+  @keyframes marquee { to { transform: translateX(-50%); } }
+  @keyframes ring { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.7); opacity: 0; } }
+  --animate-drift: drift 22s ease-in-out infinite alternate;
+  @keyframes drift {
+    from { transform: translate3d(-3%, -2%, 0); }
+    to   { transform: translate3d(3%, 2%, 0); }
+  }
+}
+
+:root {
+  --background: var(--color-primary-bg);
+  --foreground: var(--color-text-primary);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-primary-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-card-elevated);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent-primary);
+}
+
+/* Base utility for subtle grid */
+.bg-grid-subtle {
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm20 20h20v20H20V20zM0 20h20v20H0V20zM20 0h20v20H20V0z' fill='%23ffb39a' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-accent-primary);
+  color: #000;
+}
+
+/* Lenis — required rules (see lenis README) */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-smooth iframe { pointer-events: none; }
+
+/* Reduced motion: no ambient loops, no CSS transitions that move things */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Colour grading: every section gets a plum light-leak + a hairline gradient edge ---- */
+main > section, footer#contact { position: relative; isolation: isolate; }
+main > section::after, footer#contact::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(60% 50% at 85% 0%, rgba(84, 42, 82, 0.50), transparent 70%),
+    radial-gradient(45% 40% at 0% 100%, rgba(181, 85, 122, 0.10), transparent 70%);
+}
+main > section:nth-of-type(even)::after {
+  background:
+    radial-gradient(60% 50% at 10% 0%, rgba(84, 42, 82, 0.50), transparent 70%),
+    radial-gradient(45% 40% at 100% 100%, rgba(255, 179, 154, 0.07), transparent 70%);
+}
+main > section::before, footer#contact::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; z-index: 1; pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(255, 179, 154, 0.35), rgba(181, 85, 122, 0.3), transparent);
+}
+
+/* Gradient hairline ring (peach → plum → light peach) via mask; parent needs position + radius */
+.gradient-ring {
+  position: absolute; inset: 0; border-radius: inherit; padding: 1px; pointer-events: none;
+  background: linear-gradient(135deg, #ffb39a, rgba(84, 42, 82, 0.9) 50%, #ffd2c4);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+}
