@@ -1,3 +1,4 @@
+
 export const profile = {
   name: "Sulaxshajini Kumarakulasingam",
   location: "Colombo, Sri Lanka",
@@ -6,34 +7,53 @@ export const profile = {
   linkedin: "https://linkedin.com/in/sulaxshajini",
   github: "https://github.com/Sulaxshajini",
   portfolio: "https://sulaxshajini.github.io/Portfolio",
-  title: "IT Support & Infrastructure | Systems Troubleshooting | Technical Helpdesk",
-  shortDescription: "Final-year Bachelor of Information Technology undergraduate at the University of Moratuwa, with hands-on experience across databases, application systems, technical troubleshooting and cross-platform development.",
+
+  title: "Full Stack Developer | Web Applications | API Development",
+
+  shortDescription:
+    "Final-year Bachelor of Information Technology undergraduate at the University of Moratuwa, passionate about building responsive, user-friendly web applications and reliable backend systems. Experienced in application development, database management, system integration, and problem-solving, with a strong interest in creating scalable, end-to-end software solutions.",
+
   status: "OPEN TO OPPORTUNITIES",
-  focus: ["IT Support", "Infrastructure", "Databases", "Troubleshooting"],
+
+  focus: [
+    "Frontend Development",
+    "Backend Development",
+    "Database Management",
+    "REST API Integration",
+    "Responsive Web Design",
+    "Full Stack Applications"
+  ],
+
   strengths: [
     {
-      title: "Technical Troubleshooting & Problem-Solving",
-      description: "Breaking down system issues methodically and resolving them end to end."
+      title: "Frontend Development",
+      description:
+        "Building responsive, accessible, and user-friendly interfaces with a focus on usability and clean design."
     },
     {
-      title: "Systems & Database Fundamentals",
-      description: "Hands-on experience across database setup, schema design, and CRUD workflows."
+      title: "Backend Development",
+      description:
+        "Developing application logic, server-side functionality, and reliable backend services."
     },
     {
-      title: "Documentation & Process Adherence",
-      description: "Comfortable writing clear technical documentation and following SOPs."
+      title: "Database Design & Management",
+      description:
+        "Working with database structures, schema design, data relationships, and CRUD operations."
     },
     {
-      title: "Cross-Platform Adaptability",
-      description: "Experience across web, desktop, mobile, and Windows-based environments."
+      title: "API Development & Integration",
+      description:
+        "Connecting frontend interfaces with backend services through APIs and structured data exchange."
     },
     {
-      title: "Fast, Self-Directed Learning",
-      description: "Independently picking up new tools and systems ahead of role requirements."
+      title: "Problem-Solving & Debugging",
+      description:
+        "Identifying bugs, troubleshooting application issues, and improving software functionality."
     },
     {
-      title: "Team Collaboration & Communication",
-      description: "Trilingual professional communication (English, Tamil, Sinhala)."
+      title: "Collaboration & Continuous Learning",
+      description:
+        "Collaborating with teams, documenting technical work, and continuously learning modern development tools and technologies."
     }
   ]
 };
