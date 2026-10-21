@@ -18,8 +18,7 @@
 
 A premium, interactive personal portfolio for **Sulaxshajini Kumarakulasingam**, built around the concept of **"SYSTEM ONLINE"** — a sophisticated technical system interface. The site is designed to communicate IT support expertise, systems thinking, and technical troubleshooting through purposeful animation and data-driven components.
 
-> **Live:** [sulaxshajini.github.io/Portfolio](https://sulaxshajini.github.io/Portfolio) *(old)*
-> Update this link once the new version is deployed.
+> **Live:** [sulaxshajini.github.io/Portfolio](https://portfolio-sulaxshajini.onrender.com/)
 
 ---
 
@@ -164,18 +163,6 @@ OPENAI_API_KEY=sk-...
 
 ---
 
-## 📄 Resume
-
-Place your resume PDF at:
-
-```
-public/Sulaxshajini-Kumarakulasingam-Resume.pdf
-```
-
-The "Download Resume" button in the Hero section links to this path.
-
----
-
 ## 📬 Contact Form
 
 The contact form in the footer is UI-ready. To connect it to an email service:
@@ -247,7 +234,7 @@ No component code changes needed for content updates.
 
 ---
 
-## 📜 License
+## 📜 License (MIT)
 
 © 2026 Sulaxshajini Kumarakulasingam. All rights reserved.
 
