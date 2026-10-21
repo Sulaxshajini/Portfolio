@@ -75,11 +75,12 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-6xl lg:text-[72px] leading-[1.1] font-bold text-text-primary tracking-tight mb-6"
           >
-            Solving Systems.<br/>
+           
+          Building Applications.<br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-accent-primary to-accent-secondary">
-              Supporting People.
+              Connecting Ideas.
             </span>
-          </motion.h1>
+
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
